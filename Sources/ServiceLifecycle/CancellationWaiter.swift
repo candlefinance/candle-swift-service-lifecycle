@@ -13,10 +13,8 @@
 //===----------------------------------------------------------------------===//
 
 /// An actor that provides a function to wait on cancellation/graceful shutdown.
-@usableFromInline
 @available(macOS 10.15, iOS 13.0, watchOS 6.0, tvOS 13.0, *)
 actor CancellationWaiter {
-    @usableFromInline
     enum Reason: Sendable {
         case cancelled
         case gracefulShutdown
@@ -24,10 +22,8 @@ actor CancellationWaiter {
 
     private var taskContinuation: CheckedContinuation<Reason, Never>?
 
-    @usableFromInline
     init() {}
 
-    @usableFromInline
     func wait() async -> Reason {
         await withTaskCancellationHandler {
             await withGracefulShutdownHandler {

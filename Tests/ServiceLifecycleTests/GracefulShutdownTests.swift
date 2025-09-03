@@ -421,10 +421,8 @@ func uncancellable(_ closure: @escaping @Sendable () async throws -> Void) async
 private actor OnlyCancellationWaiter {
     private var taskContinuation: CheckedContinuation<Void, Never>?
 
-    @usableFromInline
     init() {}
 
-    @usableFromInline
     var cancellation: Void {
         get async {
             await withTaskCancellationHandler {
