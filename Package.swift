@@ -19,12 +19,12 @@ let package = Package(
     ],
     dependencies: [
         .package(
-            url: "https://github.com/apple/swift-log.git",
-            from: "1.5.2"
+            url: "https://github.com/candlefinance/swift-log.git",
+            branch: "fix-candle-1.6.3"
         ),
         .package(
-            url: "https://github.com/apple/swift-async-algorithms.git",
-            from: "1.0.4"
+            url: "https://github.com/candlefinance/swift-async-algorithms.git",
+            branch: "fix-candle-1.0.4"
         ),
     ],
     targets: [
