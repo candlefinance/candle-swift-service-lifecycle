@@ -2,7 +2,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "candle-swift-service-lifecycle",
+    name: "swift-service-lifecycle",
     products: [
         .library(
             name: "CandleServiceLifecycle",
@@ -27,11 +27,11 @@ let package = Package(
             dependencies: [
                 .product(
                     name: "CandleLogging",
-                    package: "candle-swift-log"
+                    package: "swift-log"
                 ),
                 .product(
                     name: "CandleAsyncAlgorithms",
-                    package: "candle-swift-async-algorithms"
+                    package: "swift-async-algorithms"
                 ),
                 .target(name: "CandleUnixSignals"),
                 .target(name: "CandleConcurrencyHelpers"),
