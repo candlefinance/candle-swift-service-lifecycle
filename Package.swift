@@ -18,12 +18,10 @@ let package = Package(
         ),
     ],
     dependencies: [
-        .package(
-            url: "https://github.com/candlefinance/swift-log.git",
+        .package(url: "https://github.com/candlefinance/swift-log.git", name: "candle-swift-log",
             branch: "fix-candle-1.6.3"
         ),
-        .package(
-            url: "https://github.com/candlefinance/swift-async-algorithms.git",
+        .package(url: "https://github.com/candlefinance/swift-async-algorithms.git", name: "candle-swift-async-algorithms",
             branch: "fix-candle-1.0.4"
         ),
     ],
@@ -33,11 +31,11 @@ let package = Package(
             dependencies: [
                 .product(
                     name: "CandleLogging",
-                    package: "swift-log"
+                    package: "candle-swift-log"
                 ),
                 .product(
                     name: "CandleAsyncAlgorithms",
-                    package: "swift-async-algorithms"
+                    package: "candle-swift-async-algorithms"
                 ),
                 .target(name: "CandleUnixSignals"),
                 .target(name: "CandleConcurrencyHelpers"),
