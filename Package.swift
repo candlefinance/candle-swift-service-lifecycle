@@ -2,7 +2,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "swift-service-lifecycle",
+    name: "candle-swift-service-lifecycle",
     products: [
         .library(
             name: "CandleServiceLifecycle",
