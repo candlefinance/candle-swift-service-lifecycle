@@ -27,11 +27,11 @@ let package = Package(
             dependencies: [
                 .product(
                     name: "CandleLogging",
-                    package: "swift-log"
+                   package: "candle-swift-log"
                 ),
                 .product(
                     name: "CandleAsyncAlgorithms",
-                    package: "swift-async-algorithms"
+                   package: "candle-swift-async-algorithms"
                 ),
                 .target(name: "CandleUnixSignals"),
                 .target(name: "CandleConcurrencyHelpers"),
