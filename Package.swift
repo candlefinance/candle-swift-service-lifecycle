@@ -9,10 +9,6 @@ let package = Package(
             targets: ["CandleServiceLifecycle"]
         ),
         .library(
-            name: "ServiceLifecycleTestKit",
-            targets: ["ServiceLifecycleTestKit"]
-        ),
-        .library(
             name: "CandleUnixSignals",
             targets: ["CandleUnixSignals"]
         ),
@@ -42,12 +38,6 @@ let package = Package(
             ]
         ),
         .target(
-            name: "ServiceLifecycleTestKit",
-            dependencies: [
-                .target(name: "CandleServiceLifecycle")
-            ]
-        ),
-        .target(
             name: "CandleUnixSignals",
             dependencies: [
                 .target(name: "CandleConcurrencyHelpers")
@@ -55,13 +45,6 @@ let package = Package(
         ),
         .target(
             name: "CandleConcurrencyHelpers"
-        ),
-        .testTarget(
-            name: "ServiceLifecycleTests",
-            dependencies: [
-                .target(name: "CandleServiceLifecycle"),
-                .target(name: "ServiceLifecycleTestKit"),
-            ]
         ),
         .testTarget(
             name: "UnixSignalsTests",
