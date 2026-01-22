@@ -18,10 +18,10 @@ let package = Package(
         ),
     ],
     dependencies: [
-        .package(url: "https://github.com/candlefinance/swift-log.git", name: "candle-swift-log",
+        .package(name: "candle-swift-log", url: "https://github.com/candlefinance/swift-log.git",
             branch: "fix-candle-1.6.3"
         ),
-        .package(url: "https://github.com/candlefinance/swift-async-algorithms.git", name: "candle-swift-async-algorithms",
+        .package(name: "candle-swift-async-algorithms", url: "https://github.com/candlefinance/swift-async-algorithms.git",
             branch: "fix-candle-1.0.4"
         ),
     ],
