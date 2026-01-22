@@ -5,16 +5,16 @@ let package = Package(
     name: "swift-service-lifecycle",
     products: [
         .library(
-            name: "ServiceLifecycle",
-            targets: ["ServiceLifecycle"]
+            name: "CandleServiceLifecycle",
+            targets: ["CandleServiceLifecycle"]
         ),
         .library(
             name: "ServiceLifecycleTestKit",
             targets: ["ServiceLifecycleTestKit"]
         ),
         .library(
-            name: "UnixSignals",
-            targets: ["UnixSignals"]
+            name: "CandleUnixSignals",
+            targets: ["CandleUnixSignals"]
         ),
     ],
     dependencies: [
@@ -29,46 +29,46 @@ let package = Package(
     ],
     targets: [
         .target(
-            name: "ServiceLifecycle",
+            name: "CandleServiceLifecycle",
             dependencies: [
                 .product(
-                    name: "Logging",
+                    name: "CandleLogging",
                     package: "swift-log"
                 ),
                 .product(
-                    name: "AsyncAlgorithms",
+                    name: "CandleAsyncAlgorithms",
                     package: "swift-async-algorithms"
                 ),
-                .target(name: "UnixSignals"),
-                .target(name: "ConcurrencyHelpers"),
+                .target(name: "CandleUnixSignals"),
+                .target(name: "CandleConcurrencyHelpers"),
             ]
         ),
         .target(
             name: "ServiceLifecycleTestKit",
             dependencies: [
-                .target(name: "ServiceLifecycle")
+                .target(name: "CandleServiceLifecycle")
             ]
         ),
         .target(
-            name: "UnixSignals",
+            name: "CandleUnixSignals",
             dependencies: [
-                .target(name: "ConcurrencyHelpers")
+                .target(name: "CandleConcurrencyHelpers")
             ]
         ),
         .target(
-            name: "ConcurrencyHelpers"
+            name: "CandleConcurrencyHelpers"
         ),
         .testTarget(
             name: "ServiceLifecycleTests",
             dependencies: [
-                .target(name: "ServiceLifecycle"),
+                .target(name: "CandleServiceLifecycle"),
                 .target(name: "ServiceLifecycleTestKit"),
             ]
         ),
         .testTarget(
             name: "UnixSignalsTests",
             dependencies: [
-                .target(name: "UnixSignals")
+                .target(name: "CandleUnixSignals")
             ]
         ),
     ]

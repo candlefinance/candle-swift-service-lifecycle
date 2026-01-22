@@ -25,7 +25,7 @@ import Musl
 @preconcurrency import Dispatch
 import Android
 #endif
-import ConcurrencyHelpers
+import CandleConcurrencyHelpers
 
 /// An unterminated `AsyncSequence` of ``UnixSignal``s.
 ///

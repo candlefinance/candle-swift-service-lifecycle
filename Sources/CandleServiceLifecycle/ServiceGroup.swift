@@ -12,9 +12,9 @@
 //
 //===----------------------------------------------------------------------===//
 
-import Logging
-import UnixSignals
-import AsyncAlgorithms
+import CandleLogging
+import CandleUnixSignals
+import CandleAsyncAlgorithms
 
 /// A ``ServiceGroup`` is responsible for running a number of services, setting up signal handling and signalling graceful shutdown to the services.
 @available(macOS 10.15, iOS 13.0, watchOS 6.0, tvOS 13.0, *)

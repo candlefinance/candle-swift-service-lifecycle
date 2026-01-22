@@ -12,8 +12,8 @@
 //
 //===----------------------------------------------------------------------===//
 
-import Logging
-import UnixSignals
+import CandleLogging
+import CandleUnixSignals
 
 let deprecatedLoggerLabel = "service-lifecycle-deprecated-method-logger"
 

@@ -12,7 +12,7 @@
 //
 //===----------------------------------------------------------------------===//
 
-@_spi(TestKit) import ServiceLifecycle
+@_spi(TestKit) import CandleServiceLifecycle
 
 /// This struct is used in testing graceful shutdown.
 ///
